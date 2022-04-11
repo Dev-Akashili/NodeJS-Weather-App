@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="image/sun-logo.png">
+    <link rel="stylesheet" href="css/weather.css" type="text/css">
+</head>
+<body>
+    <div class="main-div">
+        <div class="div-1">
+            <h1><%= city %></h1>
+            <h2><%= country %></h2>
+        </div>
+        <div class="div-2">
+            <img src="<%= icon %>" alt="">
+            <h1 class="temp"><%= temp %>°C</h1>
+        </div>
+        <h4><%= elements %></h4>
+        <div class="div-3">
+            <div class="child-1">
+                <h3>Wind Status</h3>
+                <p><%= status %> mph</p>
+            </div>
+            <div class="child-2">
+                <h3>Humidity</h3>
+                <p><%= humidity %>%</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
