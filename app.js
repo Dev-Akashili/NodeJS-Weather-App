@@ -17,6 +17,8 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const query = req.body.cityName;
   const apiKey = apiKey;
+
+  // open weather API
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=metric&appid=" + apiKey;
 
   https.get(url, (response) => {
@@ -54,10 +56,9 @@ app.post('/', (req, res) => {
 
 });
 
+// failure page
 app.post('/failure', (req, res)=>{
   res.redirect('/');
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log('You are now listening to port 3000');
-});
+app.listen(process.env.PORT);
